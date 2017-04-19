@@ -1,0 +1,21 @@
+body {
+    background: #eee url('images/45801239-hotel-images.jpg') no-repeat center center fixed;;
+    background-size: cover;
+}
+h1, h2, h3 {
+    color: #f6f6f6;
+    text-shadow: 1px 1px #494949;
+}
+.form-register input {
+    margin-bottom: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.wachtwoord {
+    color: #f6f6f6;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: rgba(122, 130, 136, 0.6) !important;
+    border-radius: 2px;
+    text-shadow: 1px 1px #494949;
+}

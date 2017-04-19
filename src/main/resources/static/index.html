@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="registrationApp.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="registrationApp" ng-controller="register">
+    <div class="container">
+        <div class="row">
+            <div class="offset-xl-3 col-xl-6 align-middle">
+                <h1 class="pt-4">kla[a]sse hotel</h1>
+                <div class="alert alert-info collapse" role="alert">
+                    <strong>Registratie succesvol!</strong>
+                </div>
+                <div class="alert alert-danger collapse" role="alert">
+                    <strong>Registratie mislukt!</strong>
+                    <div class="alertMessage">{{error}}</div>
+                </div>
+                <form class="form-register">
+                    <h3 class="pb-4">Gasten registratie</h3>
+                    <label for="firstname" class="sr-only">Voornaam</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Voornaam" ng-model="account.firstname" required autofocus>
+                    <label for="lastname" class="sr-only">Achternaam</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" placeholder="Achternaam" ng-model="account.lastname" required>
+                    <label for="email" class="sr-only">Email adres</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email adres" ng-model="account.email" required>
+                    <label for="password" class="sr-only">Wachtwoord*</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Wachtwoord*" ng-model="account.password" required>
+                    <div class="small wachtwoord align-center">
+                        *Wachtwoord moet minimaal 8 karakters lang zijn en bevat tenminste 1 hoofdletter en 1 getal.
+                    </div>
+                    <div class="pt-4"></div>
+                    <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="register('customer')">Registreer</button>
+                </form>
+            </div>
+        </div>
+    </div> <!-- /container -->
+</div>
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<script src="registrationApp.js"></script>
+</body>
+</html>
